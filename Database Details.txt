@@ -9,3 +9,7 @@ CREATE TABLE `po`.`user` ( `UID` INT(11) NOT NULLAUTO_INCREMENT , `firstName` VA
 Table2 Name: profileDetails
 
 CREATE TABLE `po`.`profileDetails` ( `PId` INT(11) NOT NULL AUTO_INCREMENT , `dob` VARCHAR(50) , `address` VARCHAR(255) , `phone` INT(15) , `nickname` VARCHAR(255) , `description` VARCHAR(255) , `photo` LONGBLOB , `UId` INT(11) , PRIMARY KEY (`PId`)) ENGINE = InnoDB;
+
+Table3 Name: upload
+
+CREATE TABLE `po`.`upload` ( `UploadId` INT(11) NOT NULL , `photo` LONGBLOB NOT NULL , `Name` VARCHAR(255) NULL , `Date` VARCHAR(50) NULL , `Description` VARCHAR(50000) NULL , `UId` INT(11) NOT NULL , PRIMARY KEY (`UploadId`)) ENGINE = InnoDB;
