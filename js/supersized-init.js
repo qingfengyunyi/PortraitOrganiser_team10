@@ -21,8 +21,8 @@ jQuery(function($){
         slide_links        : 'blank',    
         slides             : [    // Slideshow Images
                                  {image : 'img/backgrounds/1.jpg'},
-                                 {image : 'img/backgrounds/2.jpg'},
-                                 {image : '/img/backgrounds/3.jpg'}
+                                 {image : 'img/backgrounds/2.jpg'}
+                                 
                              ]
 
     });

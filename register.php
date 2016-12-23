@@ -124,11 +124,8 @@ if (isset($_POST['register'])) {
                                     </form>
 
 
-                                    <!-----//end-main---->
                                     </div>
-                                    <!-----start-copyright---->
 
-                                    <!-----//end-copyright---->
                                     <div> <button onclick="goBack()" id="button2" style="vertical-align:middle" >Home</button></div>
 
                                     <script>

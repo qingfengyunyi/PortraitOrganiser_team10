@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-/* if(isset($_SESSION['uid'])!="") {
-  header("Location: profile.php");
-  } */
+
 
 include_once 'dbConnect.php';
 
@@ -11,18 +9,14 @@ if (isset($_POST['login'])) {
 
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
-    if ($email=="Email" || $password=="Password"){
+    if ($email == "Email" || $password == "Password") {
         $errormsg = "Enter both email and password";
     } else {
-
-
         $result = mysqli_query($conn, "SELECT * FROM user WHERE email = '" . $email . "' and password = '" . md5($password) . "'");
 
         if ($row = mysqli_fetch_array($result)) {
             $_SESSION['uid'] = $row['UId'];
-          
             $_SESSION['fname'] = $row['firstName'];
-              echo $_SESSION['fname'];
             $_SESSION['lname'] = $row['lastName'];
             header("Location: profile.php");
         } else {
@@ -66,7 +60,9 @@ and open the template in the editor.
 
     <body>
 
+
         <div class="page-container">
+
             <h1>Login</h1>
             <form action="" method="post">
                 <input type="text" name="email" class="username" placeholder="Email" required>
@@ -79,8 +75,16 @@ and open the template in the editor.
                 <button type="submit" name="login">Sign Up</button>
 
             </form>
+            <button onclick="goBack()" id="button2">Home</button>
         </div>
 
+
+
+        <script>
+            function goBack() {
+                window.open('index.html');
+            }
+        </script>
 
         <!-- Javascript -->
         <script src="js/jquery-1.8.2.min.js"></script>

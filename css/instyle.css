@@ -10,6 +10,7 @@ and open the template in the editor.
 
 body 
 {font:12px Tahoma;margin:0px;text-align:center;background:white;
+ 
 }
   #header-1
 	{
@@ -17,6 +18,7 @@ body
                 background: #3300cc ;
                 border: 2px solid yellow;
                 width:1520px;
+                
               
 	}
 #header {
